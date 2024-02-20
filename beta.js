@@ -105,26 +105,7 @@ globalThis.LoadNewClient = () => {
          return 0
    };
 
-   function getCleanWebSocketFunction() {
-      return new Promise((resolve, reject) => {
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-   
-      iframe.onload = () => {
-         const cleanWebSocket = iframe.contentWindow.WebSocket;
-         document.body.removeChild(iframe);
-         resolve(cleanWebSocket);
-      };
-   
-      iframe.onerror = (error) => {
-         document.body.removeChild(iframe);
-         reject(error);
-      };
-   
-      iframe.src = 'about:blank';
-      });
-   }
+
    
    // Usage
    getCleanWebSocketFunction()
