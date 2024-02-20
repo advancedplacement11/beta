@@ -47168,9 +47168,6 @@ globalThis.LoadNewClient = () => {
          this._current_id++;
          game.quit(scoreboard.run);
          this.socket.close();
-         window.aiptag["cmd"]["display"].push(function () {
-            window.aipDisplayTag["display"]("MFN_starve-io_300x250");
-         });
       };
       this.ping = function () {
          try {
