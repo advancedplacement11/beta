@@ -105,19 +105,6 @@ globalThis.LoadNewClient = () => {
          return 0
    };
 
-
-   
-   // Usage
-   getCleanWebSocketFunction()
-      .then((cleanWebSocket) => {
-      // Use the cleanWebSocket function here
-      window.newSocket = cleanWebSocket
-      })
-      .catch((error) => {
-      console.error('Error retrieving clean WebSocket function:', error);
-      });
-
-
    //=====================================================================================================================================
    
    var AppData = {
