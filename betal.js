@@ -104,7 +104,6 @@ globalThis.LoadNewClient = () => {
 
          return 0
    };
-
    //=====================================================================================================================================
    
    var AppData = {
@@ -6095,20 +6094,6 @@ globalThis.LoadNewClient = () => {
       };
       return init(function () { });
    });
-
-   function reloadIframe() {
-      try {
-         if (window.self !== window.top) {
-            loaded = Cookies.get("inIframe");
-            if (loaded)
-               Cookies.remove("inIframe");
-            else {
-               Cookies.set("inIframe", "1");
-            }
-         }
-      } catch (e) { }
-   };
-   reloadIframe();
 
    function Mouse() {
       this.DOWN = 0, this.UP = 1, this.IDLE = 2, this.IN = 0, this.OUT = 1, this.pos = {
